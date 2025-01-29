@@ -1,14 +1,14 @@
 import { Footer } from '@/components/common/Footer';
 import { Header } from '@/components/common/Header';
 import { ContactSection } from '@/components/contact/ContactSection';
-import { Hero } from '@/components/landing/Hero';
 import React from 'react';
+import { SectionHero } from '@/components/common/SectionHero';
 
 export default function Contact() {
   return (
     <>
       <Header />
-      <Hero />
+      <SectionHero heading='Contact Us' />
       <ContactSection />
       <Footer />
     </>

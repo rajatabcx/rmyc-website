@@ -49,7 +49,7 @@ export const SailingAndSportsActivity = () => {
           ))}
         </div>
       </div>
-      <div className='absolute bottom-[-16%]  sm:right-[-12%] xl:right-0 opacity-20 pointer-events-none scale-[.7]'>
+      <div className='absolute bottom-[-10%] lg:bottom-[-16%] right-[-20%]  sm:right-[-12%] xl:right-0 opacity-20 pointer-events-none scale-[.7]'>
         <SailingBoat />
       </div>
     </section>

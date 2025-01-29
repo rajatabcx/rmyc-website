@@ -140,11 +140,11 @@ export function MembershipSection() {
             className={cn(buttonVariants({ size: 'lg' }), 'group')}
           >
             Contact Now
-            <ChevronRight className='ml-2 h-4 w-4 grou' />
+            <ChevronRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-all duration-300' />
           </Link>
         </div>
       </div>
-      <div className='absolute right-0 bottom-0 opacity-30 z-10'>
+      <div className='absolute right-[-20%] sm:right-0 bottom-[-3%] sm:bottom-0 opacity-30 z-10 scale-[.7] sm:scale-100'>
         <SailingBoat />
       </div>
     </section>
