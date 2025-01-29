@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -9,11 +8,6 @@ import { ChevronRight } from 'lucide-react';
 import { buttonVariants } from '@/components/ui/button';
 
 export function LeisureSailing() {
-  const item = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0 },
-  };
-
   return (
     <section className='px-4 md:px-8 py-12 min-h-screen flex flex-col items-center justify-center bg-secondary'>
       <div className='max-w-[1170px] space-y-6'>
@@ -31,9 +25,8 @@ export function LeisureSailing() {
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
           {leisureSailingFeatures.map((feature, i) => (
-            <motion.div
+            <div
               key={feature.title}
-              variants={item}
               className={cn(
                 'group relative overflow-hidden rounded-xl border bg-white p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1',
                 i === leisureSailingFeatures.length - 1 &&
@@ -50,15 +43,14 @@ export function LeisureSailing() {
                 </p>
               </div>
               <div className='absolute inset-0 bg-gradient-to-t from-blue-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity' />
-            </motion.div>
+            </div>
           ))}
         </div>
 
         <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mt-6'>
           {packages.map((pkg) => (
-            <motion.div
+            <div
               key={pkg.title}
-              variants={item}
               className='group relative overflow-hidden rounded-xl border'
             >
               <div className='absolute inset-0'>
@@ -78,11 +70,11 @@ export function LeisureSailing() {
                 </h3>
                 <p className='text-white text-sm'>{pkg.description}</p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
-        <motion.div variants={item} className='mt-12 text-center'>
+        <div className='mt-12 text-center'>
           <p className='text-base text-muted-foreground mb-6'>
             Set sail with RMYC for an experience that combines adventure,
             relaxation, and the joy of being on the water!
@@ -96,7 +88,7 @@ export function LeisureSailing() {
               <ChevronRight />
             </span>
           </Link>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
