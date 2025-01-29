@@ -1,7 +1,6 @@
 import {
   Calendar,
   Heart,
-  Users,
   Ship,
   GraduationCap,
   TrafficCone,
@@ -9,6 +8,13 @@ import {
   Award,
   Trophy,
   UserRound,
+  Building2,
+  Moon,
+  Shield,
+  Clock,
+  UsersRound,
+  Compass,
+  Users2,
 } from 'lucide-react';
 
 export const membershipBenefits = [
@@ -40,7 +46,7 @@ export const membershipBenefits = [
     title: 'Networking and Community',
     description:
       'Connect with a vibrant network of fellow sailors, adventurers, and professionals who share your passion for the sea.',
-    icon: Users,
+    icon: UsersRound,
   },
 ];
 
@@ -176,5 +182,125 @@ export const committeeMembers = [
     title: 'OH&M',
     name: 'Abhimanyu Panwar',
     icon: UserRound,
+  },
+];
+
+export const leisureSailingFeatures = [
+  {
+    icon: Clock,
+    title: 'Flexible Timings',
+    description:
+      'Start your day with the tranquility of sunrise sailing or enjoy a relaxed afternoon on the water. Available during working hours (9 AM to 5 PM) on most days.',
+  },
+  {
+    icon: Shield,
+    title: 'Safety First',
+    description:
+      'Your safety is our priority. We provide lifejackets and ensure all sailing experiences are supervised by experienced sailors. No swimming skills required.',
+  },
+  {
+    icon: UsersRound,
+    title: 'Accessible to All',
+    description:
+      "Sailing is for everyone! Whether you're a beginner or just looking for a new experience, our team will guide you every step of the way.",
+  },
+  {
+    icon: Moon,
+    title: 'Full Moon Sailing',
+    description:
+      "Soak in the mesmerizing beauty of the sea under the full moon's glow for an enchanting evening.",
+  },
+];
+
+export const packages = [
+  {
+    icon: Heart,
+    title: 'Couple Packages',
+    description:
+      "Celebrate life's special moments with romantic sunset sailing trips.",
+    image: '/proposal.jpg',
+  },
+  {
+    icon: UsersRound,
+    title: 'Family & Friends',
+    description:
+      'Create lasting memories with loved ones on our family-friendly leisure sailing experiences.',
+    image: '/gallery_8.jpg',
+  },
+  {
+    icon: Building2,
+    title: 'Corporate Packages',
+    description:
+      'Treat your team to an unforgettable day with our premium sailing options, accommodating group sizes of 50+.',
+    image: '/gallery_11.jpg',
+  },
+];
+
+export const learningPrograms = [
+  {
+    icon: Compass,
+    title: 'Learn to Be a Helm',
+    description: 'Master the art of steering and vessel management',
+    features: [
+      'Develop skills to steer and manage a J80 with precision',
+      'Structured training focused on building confidence',
+      'Learn leadership skills on the water',
+      'Hands-on experience with modern sailing equipment',
+    ],
+  },
+  {
+    icon: UsersRound,
+    title: 'Learn to Be a Crew',
+    description: 'Comprehensive training for aspiring crew members',
+    features: [
+      'Gain practical experience on various boats',
+      'Learn teamwork and navigation skills',
+      'Master vessel management essentials',
+      'Train on Seabird, Enterprise, Omega, and Laser Bahia',
+    ],
+  },
+  {
+    icon: Clock,
+    title: 'Flexible Learning Options',
+    description: 'Programs that fit your schedule',
+    features: [
+      'Weekday and weekend batches available',
+      'Learn fundamentals at your own pace',
+      'Structured progression path',
+      'Flexible scheduling options',
+    ],
+  },
+  {
+    icon: Users2,
+    title: 'Customized Camps & Groups',
+    description: 'Tailored programs for groups and organizations',
+    features: [
+      'Perfect for families and corporate teams',
+      'Accommodates groups of 10+ people',
+      'Foster teamwork and sailing skills',
+      'Create shared memories on the water',
+    ],
+  },
+  {
+    icon: Shield,
+    title: 'Safety Protocols',
+    description: 'Your safety is our top priority',
+    features: [
+      'YAI-accredited training center',
+      'Expert supervision at all times',
+      'Complete safety equipment provided',
+      'Structured learning environment',
+    ],
+  },
+  {
+    icon: GraduationCap,
+    title: 'Expert Training',
+    description: 'Learn from the best in the field',
+    features: [
+      'Highly trained professional coaches',
+      'Technical expertise and passion',
+      'World-class learning experience',
+      'Continuous support and guidance',
+    ],
   },
 ];
