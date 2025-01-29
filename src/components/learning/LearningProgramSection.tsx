@@ -1,7 +1,7 @@
 'use client';
 
 import { Shield, ChevronRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { buttonVariants } from '@/components/ui/button';
 import {
   Card,
   CardContent,
@@ -10,6 +10,8 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { learningPrograms } from '@/lib/const';
+import Link from 'next/link';
+import { cn } from '@/lib/utils';
 
 export function LearningProgramsSection() {
   return (
@@ -73,10 +75,13 @@ export function LearningProgramsSection() {
         </div>
 
         <div className='mt-10 text-center'>
-          <Button size='lg' className='text-white group'>
+          <Link
+            href='/contact'
+            className={cn(buttonVariants({ size: 'lg' }), 'group')}
+          >
             Join our learning programs
             <ChevronRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />
-          </Button>
+          </Link>
           <p className='mt-4 text-muted-foreground text-sm'>
             Develop your sailing skills while enjoying the peace of mind that
             comes from being in safe, experienced hands.

@@ -15,40 +15,14 @@ import {
   UsersRound,
   Compass,
   Users2,
+  Settings,
+  Home,
+  User,
+  Users,
+  Network,
+  Anchor,
+  History,
 } from 'lucide-react';
-
-export const membershipBenefits = [
-  {
-    title: 'Access to Club Boats and Facilities',
-    description:
-      'Enjoy unlimited access to our fleet, including J80s, Seabirds, Omegas, and more, along with world-class sailing infrastructure.',
-    icon: Ship,
-  },
-  {
-    title: 'Expert Training Opportunities',
-    description:
-      'Learn from national-level coaches and trainers, with exclusive discounts on training programs and camps.',
-    icon: GraduationCap,
-  },
-  {
-    title: 'Exclusive Events',
-    description:
-      'Participate in members-only events like regattas, full-moon sailing nights, and social gatherings.',
-    icon: Calendar,
-  },
-  {
-    title: 'Family-Friendly Environment',
-    description:
-      'Introduce your kids and loved ones to the joys of sailing with programs tailored for all ages.',
-    icon: Heart,
-  },
-  {
-    title: 'Networking and Community',
-    description:
-      'Connect with a vibrant network of fellow sailors, adventurers, and professionals who share your passion for the sea.',
-    icon: UsersRound,
-  },
-];
 
 export const sportActivity = [
   {
@@ -302,5 +276,80 @@ export const learningPrograms = [
       'World-class learning experience',
       'Continuous support and guidance',
     ],
+  },
+];
+
+export const membershipBenefits = [
+  {
+    icon: Anchor,
+    title: 'Access to Club Boats and Facilities',
+    description:
+      'Enjoy unlimited access to our fleet, including J80s, Seabirds, Omegas, and more, along with world-class sailing infrastructure.',
+  },
+  {
+    icon: GraduationCap,
+    title: 'Expert Training Opportunities',
+    description:
+      'Learn from national-level coaches and trainers, with exclusive discounts on training programs and camps.',
+  },
+  {
+    icon: Calendar,
+    title: 'Exclusive Events',
+    description:
+      'Participate in members-only events like regattas, full-moon sailing nights, and social gatherings.',
+  },
+  {
+    icon: Users,
+    title: 'Family-Friendly Environment',
+    description:
+      'Introduce your kids and loved ones to the joys of sailing with programs tailored for all ages.',
+  },
+  {
+    icon: Network,
+    title: 'Networking and Community',
+    description:
+      'Connect with a vibrant network of fellow sailors, adventurers, and professionals who share your passion for the sea.',
+  },
+];
+
+export const membershipCategories = [
+  {
+    icon: User,
+    title: 'INDIVIDUAL MEMBERSHIP',
+    description:
+      'Perfect for solo enthusiasts looking to dive deep into the world of sailing.',
+  },
+  {
+    icon: Building2,
+    title: 'CORPORATE MEMBERSHIP',
+    description:
+      'Ideal for businesses looking to offer their teams unique recreational opportunities and team-building events.',
+  },
+  {
+    icon: Home,
+    title: 'FAMILY MEMBERSHIP',
+    description:
+      "Share the experience with your family, ensuring everyone gets to enjoy the club's offerings.",
+  },
+];
+
+export const membershipReasons = [
+  {
+    icon: History,
+    title: 'Heritage and Excellence',
+    description:
+      "As South India's oldest sailing club, RMYC offers a rich legacy combined with modern amenities.",
+  },
+  {
+    icon: Settings,
+    title: 'Flexible Options',
+    description:
+      'Our membership plans are tailored to suit individuals, families, and organizations.',
+  },
+  {
+    icon: Heart,
+    title: 'Inclusivity',
+    description:
+      'No prior experience or swimming skills are required to start your sailing journey with us.',
   },
 ];

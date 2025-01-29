@@ -7,14 +7,16 @@ export const CommitteeMembers = () => {
     <section className='px-4 md:px-8 py-12 min-h-screen flex flex-col items-center justify-center bg-secondary'>
       <div className='max-w-[1170px] space-y-6'>
         <div className='text-center'>
-          <h1 className='text-2xl md:text-4xl font-bold mb-2'>ACHIEVEMENTS</h1>
+          <h1 className='text-2xl md:text-4xl font-bold mb-2'>
+            Committee Members
+          </h1>
           <p className='text-sm md:text-base text-muted-foreground'>
             Over the years the Club has a rich haul of national and
             international medals.
           </p>
         </div>
       </div>
-      <div className='mt-6 grid gap-3 md:grid-cols-2 lg:mt-10 lg:grid-cols-4'>
+      <div className='mt-6 grid gap-3 sm:grid-cols-2 lg:mt-10 lg:grid-cols-4'>
         {committeeMembers.map((member) => (
           <Card
             key={member.title}

@@ -22,9 +22,9 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className='fixed top-0 left-0 right-0 z-50 mx-auto w-full bg-white max-h-20'>
-      <div className='max-w-[1170px] mx-auto px-4'>
-        <div className='flex h-20 items-center justify-between lg:h-24'>
+    <header className='sticky top-0 left-0 right-0 z-50 mx-auto w-full bg-white max-h-20'>
+      <div className='max-w-[1170px] mx-auto px-4 h-20'>
+        <div className='flex items-center justify-between h-20'>
           {/* Desktop Navigation - Left Side */}
           <nav className='hidden lg:flex lg:flex-1'>
             <ul className='flex items-center space-x-8'>
@@ -38,7 +38,10 @@ export function Header() {
 
           {/* Logo - Center on desktop, left on mobile */}
           <div className='flex flex-1 items-center lg:flex-none lg:justify-center z-50'>
-            <Link href='/' className='relative block h-16 w-16 lg:h-20 lg:w-20'>
+            <Link
+              href='/'
+              className='relative h-16 w-16 lg:h-20 lg:w-20 flex items-center'
+            >
               <Image
                 src='/rmyc_logo.png'
                 alt='Sailing Club Logo'

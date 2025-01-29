@@ -26,15 +26,14 @@ export function Hero() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
             quos.
           </p>
+          <button
+            onClick={scrollToNextSection}
+            className='animate-bounce rounded-full bg-white/10 p-2 backdrop-blur-sm transition-colors hover:bg-white/20 mt-8'
+            aria-label='Scroll to next section'
+          >
+            <ChevronDown className='h-6 w-6 text-white' />
+          </button>
         </div>
-
-        <button
-          onClick={scrollToNextSection}
-          className='absolute bottom-8 animate-bounce rounded-full bg-white/10 p-2 backdrop-blur-sm transition-colors hover:bg-white/20'
-          aria-label='Scroll to next section'
-        >
-          <ChevronDown className='h-6 w-6 text-white' />
-        </button>
       </div>
     </section>
   );

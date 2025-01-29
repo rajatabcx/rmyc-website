@@ -1,15 +1,15 @@
 import { Footer } from '@/components/common/Footer';
 import { Header } from '@/components/common/Header';
-import { Membership as MembershipComponent } from '@/components/membership/Membership';
-import { MembershipBenefit } from '@/components/membership/MembershipBenefit';
+import { SectionHero } from '@/components/common/SectionHero';
+import { MembershipSection } from '@/components/membership/MembershipSection';
 import React from 'react';
 
 export default function Membership() {
   return (
     <>
       <Header />
-      <MembershipComponent />
-      <MembershipBenefit />
+      <SectionHero heading='Membership' />
+      <MembershipSection />
       <Footer />
     </>
   );

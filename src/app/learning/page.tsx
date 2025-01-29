@@ -1,6 +1,6 @@
 import { Footer } from '@/components/common/Footer';
 import { Header } from '@/components/common/Header';
-import { Hero } from '@/components/landing/Hero';
+import { SectionHero } from '@/components/common/SectionHero';
 import { LearningProgramsSection } from '@/components/learning/LearningProgramSection';
 import React from 'react';
 
@@ -8,7 +8,7 @@ export default function Learning() {
   return (
     <>
       <Header />
-      <Hero />
+      <SectionHero heading='Learning Programs' />
       <LearningProgramsSection />
       <Footer />
     </>
