@@ -1,8 +1,10 @@
 'use client';
 
+import { SailingBoat } from '../common/SailingBoat';
+
 export function About() {
   return (
-    <div className='px-4 md:px-8 py-12 min-h-screen flex flex-col items-center justify-center bg-secondary'>
+    <div className='px-4 md:px-8 py-12 min-h-screen flex flex-col items-center justify-center bg-secondary relative overflow-hidden'>
       <div className='grid gap-8 lg:grid-cols-2  max-w-[1170px]'>
         <div className='text-center col-span-full'>
           <h1 className='text-2xl md:text-4xl font-bold mb-2'>About Us</h1>
@@ -80,6 +82,9 @@ export function About() {
             enjoyable for everyone.
           </p>
         </div>
+      </div>
+      <div className='absolute opacity-20 pointer-events-none bottom-0 right-0 hidden lg:block'>
+        <SailingBoat />
       </div>
     </div>
   );

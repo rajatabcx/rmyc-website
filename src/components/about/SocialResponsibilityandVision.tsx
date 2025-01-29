@@ -33,18 +33,18 @@ export function SocialResponsibilityAndVision() {
         {/* Right Image Group */}
         <div className='flex gap-4 items-center flex-col md:flex-row'>
           <img
-            src='/about_1.jpg'
+            src='/social_1.jpg'
             alt='about 1'
             className='md:w-1/2 object-cover rounded-lg aspect-[0.9] h-[70%]'
           />
           <div className='md:w-1/2 space-y-4'>
             <img
-              src='/about_4.jpg'
+              src='/social_3.jpg'
               alt='about 2'
               className='w-full object-cover rounded-lg aspect-[0.9]'
             />
             <img
-              src='/about_3.jpg'
+              src='/social_4.jpg'
               alt='about 3'
               className='w-full object-cover rounded-lg aspect-[0.9]'
             />
@@ -54,18 +54,18 @@ export function SocialResponsibilityAndVision() {
         {/* Left img Group */}
         <div className='flex gap-4 items-center flex-col md:flex-row'>
           <img
-            src='/hero_bg.jpg'
+            src='/social_2.jpg'
             alt='about 2'
             className='md:w-1/2 object-cover rounded-lg aspect-[0.9] h-[70%] object-58%]'
           />
           <div className='md:w-1/2 space-y-4'>
             <img
-              src='/about_5.jpg'
+              src='/social_5.jpg'
               alt='about 5'
               className='w-full object-cover rounded-lg aspect-[0.9]'
             />
             <img
-              src='/about_8.jpg'
+              src='/social_6.jpg'
               alt='about 8'
               className='w-full object-cover rounded-lg aspect-[0.9]'
             />
@@ -88,16 +88,18 @@ export function SocialResponsibilityAndVision() {
             </p>
             <p className='text-sm text-muted-foreground'>
               The Club has expanded and has Centres namely
-              <ul className='list-disc list-inside text-primary space-y-1 my-2'>
-                <li>
-                  {' '}
-                  RMYC Ennore Centre located inside the Kamarajar Port Limited.
-                </li>
-                <li>
-                  RMYC Mysore Centre located on the backwaters of the KRS Dam,
-                  Mysuru.
-                </li>
-              </ul>
+            </p>
+            <ul className='list-disc list-inside text-primary space-y-1 my-2 text-sm'>
+              <li>
+                {' '}
+                RMYC Ennore Centre located inside the Kamarajar Port Limited.
+              </li>
+              <li>
+                RMYC Mysore Centre located on the backwaters of the KRS Dam,
+                Mysuru.
+              </li>
+            </ul>
+            <p className='text-sm text-muted-foreground'>
               Over the last hundred years having FUN on the waters and opening
               RMYC Centres to promote sailing and water sports has been our
               motto and will continue to be so as we sail passionately beyond

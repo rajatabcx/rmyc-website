@@ -57,9 +57,9 @@ export function LearningProgramsSection() {
           ))}
         </div>
 
-        <div className='flex flex-col gap-6 p-6 rounded-xl bg-primary text-white'>
+        <div className='flex flex-col gap-6 p-6 py-20 rounded-xl bg-primary text-white relative overflow-hidden'>
+          <Shield className='absolute right-4 top-1/2 -translate-y-1/2 h-48 w-48 opacity-20' />
           <div className='flex items-center gap-4'>
-            <Shield className='h-8 w-8' />
             <h3 className='text-xl font-semibold'>Safety First at RMYC</h3>
           </div>
           <p className='text-muted text-sm'>

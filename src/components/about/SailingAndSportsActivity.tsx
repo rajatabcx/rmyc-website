@@ -1,8 +1,9 @@
 import { sportActivity } from '@/lib/const';
+import { SailingBoat } from '../common/SailingBoat';
 
 export const SailingAndSportsActivity = () => {
   return (
-    <section className='px-4 md:px-8 py-12 min-h-screen flex flex-col items-center justify-center'>
+    <section className='px-4 md:px-8 py-12 min-h-screen flex flex-col items-center justify-center relative overflow-hidden'>
       <div className='max-w-[1170px] space-y-6'>
         <div className='text-center'>
           <h1 className='text-2xl md:text-4xl font-bold mb-2'>
@@ -47,6 +48,9 @@ export const SailingAndSportsActivity = () => {
             </div>
           ))}
         </div>
+      </div>
+      <div className='absolute bottom-[-10%]  sm:right-[-12%] opacity-20 pointer-events-none scale-[.7]'>
+        <SailingBoat />
       </div>
     </section>
   );
