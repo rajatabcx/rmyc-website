@@ -113,3 +113,14 @@ body {
     grid-row: span 1;
   }
 }
+
+
+
+table th {
+  background-color: #f0f0f0;
+}
+
+table td,
+table th {
+  padding: 8px !important;
+}
