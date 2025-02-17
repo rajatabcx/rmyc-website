@@ -27,7 +27,7 @@ export function CompetitionCard({
 
   return (
     <Link href={`/competition/${slug}`}>
-      <Card className='overflow-hidden transition-all hover:shadow-lg'>
+      <Card className='overflow-hidden transition-all hover:shadow-lg h-full'>
         <div className='relative h-48 w-full'>
           <Image
             src={coverImage.url || '/placeholder.svg'}

@@ -353,3 +353,100 @@ export const membershipReasons = [
       'No prior experience or swimming skills are required to start your sailing journey with us.',
   },
 ];
+export const boatsData: {
+  name: string;
+  description: string;
+  images: string[];
+}[] = [
+  {
+    name: 'Hansa',
+    description:
+      'A stable and accessible dinghy designed for sailors of all abilities, including those with disabilities. Ideal for relaxed sailing and beginners.',
+    images: ['/boats/hansa 2.jpg', '/boats/hansa.jpg'],
+  },
+  {
+    name: 'Optimist',
+    description:
+      'A small, single-handed dinghy designed for young sailors. Its simplicity and stability make it the most popular junior training boat worldwide.',
+    images: [
+      '/boats/optimist 4.jpeg',
+      '/boats/optimist2.jpeg',
+      '/boats/optmist1.jpg',
+    ],
+  },
+  {
+    name: 'Enterprise',
+    description:
+      'A versatile two-person dinghy with a distinctive blue sail, well-suited for both cruising and competitive racing.',
+    images: ['/boats/enterprise 1.jpg', '/boats/enterprise 2.jpg'],
+  },
+  {
+    name: '420',
+    description:
+      'A high-performance double-handed dinghy with a trapeze and spinnaker, commonly used for youth training and racing.',
+    images: ['/boats/420.jpg'],
+  },
+  {
+    name: 'ILCA (Laser)',
+    description:
+      'A popular single-handed racing dinghy known for its simplicity, speed, and strict one-design rules, making it a top choice for competitive sailors.',
+    images: ['/boats/laser 2.JPG', '/boats/laser 3.jpg'],
+  },
+  {
+    name: 'Laser Bahia',
+    description:
+      'A stable and spacious dinghy with a furling jib and optional spinnaker, perfect for training, family sailing, and club racing.',
+    images: [
+      '/boats/laser bahia 2.webp',
+      '/boats/laser bahia.jpeg',
+      '/boats/laser.avif',
+    ],
+  },
+  {
+    name: 'Omega',
+    description:
+      'A large, durable dinghy with a high-capacity cockpit, ideal for group sailing, training, and recreational outings.',
+    images: ['/boats/omega1.jpg', '/boats/omega2.jpg', '/boats/omega3.jpg'],
+  },
+  {
+    name: '29er',
+    description:
+      'A fast and dynamic skiff for two sailors, featuring a trapeze and asymmetric spinnaker, designed for advanced youth and competitive sailing.',
+    images: ['/boats/29er 1.jpg', '/boats/29er 2.jpeg'],
+  },
+  {
+    name: 'J80',
+    description:
+      'A sporty keelboat with excellent handling and stability, widely used for racing and training, offering exhilarating performance.',
+    images: ['/boats/j80 1.JPG', '/boats/j80 2.JPG', '/boats/j80 3.jpg'],
+  },
+  {
+    name: 'Seabird',
+    description:
+      'A classic keelboat known for its elegant design and steady sailing characteristics, making it ideal for both cruising and club racing.',
+    images: [
+      '/boats/seabird 2.jpg',
+      '/boats/seabird 3.jpg',
+      '/boats/Seabird.jpg',
+    ],
+  },
+];
+
+export const aboutImages = [
+  {
+    title: 'ROYAL MADRAS YACHT CLUB estd 1911',
+    image: '/about_10.jpg',
+  },
+  {
+    title: 'Boats on ground and berthed ',
+    image: '/about_11.jpg',
+  },
+  {
+    title: 'Floating pontoon outside the Club',
+    image: '/about_12.jpg',
+  },
+  {
+    title: 'Class room',
+    image: '/about_13.jpg',
+  },
+];

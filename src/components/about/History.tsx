@@ -8,7 +8,7 @@ export default function History() {
           <h1 className='text-2xl md:text-4xl font-bold mb-2'>
             HISTORY OF ROYAL MADRAS YACHT CLUB estd. 1911
           </h1>
-          <p className='text-xs sm:text-sm md:text-base text-muted-foreground'>
+          <p className='text-xs sm:text-sm md:text-base text-muted-foreground text-justify'>
             The Coromandel coast was known for its ports from the early common
             era. The English found the Cooum outlet to be a place for trading
             post during 1639 and thus the Madras Port was set up. Madras being
