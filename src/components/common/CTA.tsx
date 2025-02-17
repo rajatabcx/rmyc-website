@@ -1,6 +1,6 @@
-import { Button } from '@/components/ui/button';
 import { Sailboat2 } from './Sailboat2';
-
+import Link from 'next/link';
+import { buttonVariants } from '@/components/ui/button';
 export const Cta = () => {
   return (
     <section className='py-10 bg-secondary/50 relative overflow-hidden'>
@@ -16,7 +16,12 @@ export const Cta = () => {
               passionate about sailing and the sport of sailing.
             </p>
             <div className='mt-11 flex flex-col justify-center gap-2 sm:flex-row'>
-              <Button size='lg'>Contact Us</Button>
+              <Link
+                href='/contact'
+                className={buttonVariants({ variant: 'default', size: 'lg' })}
+              >
+                Contact Us
+              </Link>
             </div>
           </div>
         </div>
