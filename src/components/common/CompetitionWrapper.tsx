@@ -1,4 +1,4 @@
-import { getCompetitions } from '@/app/actions/competetions';
+import { getCompetitions } from '@/actions/competetions';
 import { Competition } from '@/lib/types';
 import React from 'react';
 import { CompetitionCard } from '../competetion/CompetetionCard';

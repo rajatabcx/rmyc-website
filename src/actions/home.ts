@@ -1,11 +1,12 @@
-import { aboutPageQuery } from '@/lib/graphql';
+'use server';
+import { homePageQuery } from '@/lib/graphql';
 
-export const getAboutPageData = async () => {
+export const getHomePageData = async () => {
   const response = await fetch(process.env.HYGRAPH_URL!, {
     method: 'POST',
     body: JSON.stringify({
-      query: aboutPageQuery,
-      variables: { id: process.env.ABOUT_PAGE_ID! },
+      query: homePageQuery,
+      variables: { id: process.env.HOME_PAGE_ID! },
     }),
     headers: {
       'content-type': 'application/json',
@@ -13,7 +14,7 @@ export const getAboutPageData = async () => {
     },
   });
   const {
-    data: { about },
+    data: { home },
   } = await response.json();
-  return about;
+  return home;
 };

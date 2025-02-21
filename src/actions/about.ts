@@ -1,11 +1,12 @@
-import { galleryQuery } from '@/lib/graphql';
+'use server';
+import { aboutPageQuery } from '@/lib/graphql';
 
-export const getGalleryData = async () => {
+export const getAboutPageData = async () => {
   const response = await fetch(process.env.HYGRAPH_URL!, {
     method: 'POST',
     body: JSON.stringify({
-      query: galleryQuery,
-      variables: { id: process.env.GALLERY_PAGE_ID! },
+      query: aboutPageQuery,
+      variables: { id: process.env.ABOUT_PAGE_ID! },
     }),
     headers: {
       'content-type': 'application/json',
@@ -13,7 +14,7 @@ export const getGalleryData = async () => {
     },
   });
   const {
-    data: { gallery },
+    data: { about },
   } = await response.json();
-  return gallery;
+  return about;
 };

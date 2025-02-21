@@ -3,7 +3,7 @@ import remarkGfm from 'remark-gfm';
 
 import { Footer } from '@/components/common/Footer';
 import { Header } from '@/components/common/Header';
-import { getCompetition } from '@/app/actions/competetions';
+import { getCompetition } from '@/actions/competetions';
 import { CompetitionDetails } from '@/lib/types';
 import Image from 'next/image';
 import { CalendarDays } from 'lucide-react';

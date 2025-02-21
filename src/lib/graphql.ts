@@ -115,6 +115,11 @@ query AboutQuery ($id: ID!) {
     sailingDescription{
       markdown
     }
+    sailingData{
+      title
+      description
+      iconName
+    }
     achievementHeading
     achievementSubtext
     achievementDescription
@@ -147,6 +152,101 @@ query AboutQuery ($id: ID!) {
       description
     }
     
+  }
+}
+`;
+
+export const leisurePageQuery = `
+query LeisureQuery ($id: ID!) {
+  leisure(
+    where:{id:$id}
+  ) {
+  	pageBg{
+      url
+    }
+    pageHeading
+   	leisureHeading
+    leisureDescription
+    leisureData{
+      title
+      description
+      iconName
+    }
+    packageData{
+      title
+      description
+      iconName
+      bgImage{
+        url
+      }
+    }
+    tagLine
+  }
+}
+`;
+
+export const learningPageQuery = `
+query LearningQuery ($id: ID!) {
+  learning(
+    where:{id:$id}
+  ) {
+  	pageBg{
+      url
+    }
+    pageHeading
+   learningHeading
+    learningDescription{
+      markdown
+    }
+    learningData{
+      title
+      description
+      iconName
+      features
+    }
+    cardTitle
+    cardDescription
+    tagLine
+  }
+}
+`;
+
+export const membershipPageQuery = `
+query MembershipQuery ($id: ID!) {
+  membership(
+    where:{id:$id}
+  ) {
+  	pageBg{
+      url
+    }
+    pageHeading
+   	membershipHeading
+    membershipDescription{
+      markdown
+    }
+    benefitHeading
+    benefits{
+      title
+      description
+      iconName
+    }
+    categoriesHeading
+    categories{
+      title
+      description
+      iconName
+    }
+    whyJoinHeading
+    whyJoin{
+      title
+      description
+      iconName
+    }
+    howToJoinHeading
+    howToJoinDescription{
+      markdown
+    }
+    tagLine
   }
 }
 `;

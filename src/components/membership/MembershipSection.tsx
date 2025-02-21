@@ -11,42 +11,77 @@ import {
 } from '@/components/ui/card';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
-import {
-  membershipBenefits,
-  membershipCategories,
-  membershipReasons,
-} from '@/lib/const';
 import { SailingBoat } from '../common/SailingBoat';
+import { DynamicIcon } from 'lucide-react/dynamic';
+import Markdown from 'react-markdown';
 
-export function MembershipSection() {
+export function MembershipSection({
+  heading,
+  description,
+  benefits,
+  categories,
+  whyJoin,
+  howToJoinHeading,
+  howToJoinDescription,
+  tagLine,
+  whyJoinHeading,
+  benefitsHeading,
+  categoriesHeading,
+}: {
+  heading: string;
+  description: {
+    markdown: string;
+  };
+  benefitsHeading: string;
+  benefits: {
+    title: string;
+    description: string;
+    iconName: string;
+  }[];
+  categoriesHeading: string;
+  categories: {
+    title: string;
+    description: string;
+    iconName: string;
+  }[];
+  whyJoinHeading: string;
+  whyJoin: {
+    title: string;
+    description: string;
+    iconName: string;
+  }[];
+  howToJoinHeading: string;
+  howToJoinDescription: {
+    markdown: string;
+  };
+  tagLine: string;
+}) {
   return (
     <section className='px-4 md:px-8 py-12 min-h-screen flex flex-col items-center justify-center relative overflow-hidden'>
       <div className='max-w-[1170px] space-y-6 relative z-20'>
         {/* Header Section */}
         <div className='text-center'>
-          <h2 className='text-2xl md:text-4xl font-bold mb-2'>
-            MEMBERSHIP AT THE ROYAL MADRAS YACHT CLUB
-          </h2>
-          <p className='text-sm md:text-base text-muted-foreground'>
-            Becoming a member of the Royal Madras Yacht Club (RMYC) means{' '}
-            <span className='font-medium'>joining an exclusive community</span>{' '}
-            of sailing enthusiasts while gaining access to premier facilities,
-            training programs, and unforgettable experiences on the water.
-          </p>
+          <h2 className='text-2xl md:text-4xl font-bold mb-2'>{heading}</h2>
+          <Markdown className='prose max-w-none text-muted-foreground'>
+            {description.markdown}
+          </Markdown>
         </div>
 
         {/* Benefits Section */}
         <div>
-          <h3 className='text-2xl font-bold mb-6'>MEMBERSHIP BENEFITS</h3>
+          <h3 className='text-2xl font-bold mb-6'>{benefitsHeading}</h3>
           <div className='grid gap-6 md:grid-cols-2'>
-            {membershipBenefits.map((benefit) => (
+            {benefits.map((benefit) => (
               <Card
                 key={benefit.title}
                 className='group hover:shadow-lg transition-all duration-300'
               >
                 <CardHeader>
                   <div className='flex items-center gap-4'>
-                    <benefit.icon className='h-6 w-6' />
+                    <DynamicIcon
+                      name={benefit.iconName as any}
+                      className='h-6 w-6'
+                    />
                     <CardTitle className='text-lg'>{benefit.title}</CardTitle>
                   </div>
                 </CardHeader>
@@ -59,16 +94,19 @@ export function MembershipSection() {
         </div>
 
         <div className='mt-16'>
-          <h3 className='text-2xl font-bold mb-6'>MEMBERSHIP CATEGORIES</h3>
+          <h3 className='text-2xl font-bold mb-6'>{categoriesHeading}</h3>
           <div className='grid gap-6 sm:grid-cols-2 md:grid-cols-3'>
-            {membershipCategories.map((category) => (
+            {categories.map((category) => (
               <Card
                 key={category.title}
                 className='group relative overflow-hidden flex flex-col justify-between'
               >
                 <CardHeader>
                   <div className='flex items-center gap-4 mb-2'>
-                    <category.icon className='h-6 w-6' />
+                    <DynamicIcon
+                      name={category.iconName as any}
+                      className='h-6 w-6'
+                    />
                     <CardTitle>{category.title}</CardTitle>
                   </div>
                   <p className='text-muted-foreground'>
@@ -92,14 +130,17 @@ export function MembershipSection() {
 
         {/* Why Join Section */}
         <div className='mt-16'>
-          <h3 className='text-2xl font-bold mb-6'>WHY JOIN RMYC?</h3>
+          <h3 className='text-2xl font-bold mb-6'>{whyJoinHeading}</h3>
           <div className='grid gap-4'>
-            {membershipReasons.map((reason) => (
+            {whyJoin.map((reason) => (
               <div
                 key={reason.title}
                 className='flex items-start gap-4 p-4 rounded-lg hover:bg-accent transition-colors'
               >
-                <reason.icon className='h-6 w-6 mt-1' />
+                <DynamicIcon
+                  name={reason.iconName as any}
+                  className='h-6 w-6 mt-1'
+                />
                 <div>
                   <h4 className='font-semibold'>{reason.title}</h4>
                   <p className='text-muted-foreground'>{reason.description}</p>
@@ -113,18 +154,12 @@ export function MembershipSection() {
         <div className='mt-16'>
           <Card>
             <CardHeader>
-              <CardTitle>HOW TO JOIN?</CardTitle>
+              <CardTitle>{howToJoinHeading}</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className='text-muted-foreground'>
-                Becoming a member is easy! Simply fill out the membership
-                application form, and our team will guide you through the
-                process.{' '}
-                <a href='/contact' className='underline hover:text-primary'>
-                  For more details about membership plans and fees
-                </a>
-                , get in touch with us today.
-              </p>
+              <Markdown className='prose max-w-none text-muted-foreground'>
+                {howToJoinDescription.markdown}
+              </Markdown>
             </CardContent>
           </Card>
         </div>
@@ -132,8 +167,7 @@ export function MembershipSection() {
         {/* CTA Section */}
         <div className='mt-16 text-center'>
           <p className='text-sm md:text-base mb-6 text-muted-foreground'>
-            Start your sailing adventure with the Royal Madras Yacht Club—where
-            the sea meets your passion!
+            {tagLine}
           </p>
           <Link
             href='/contact'

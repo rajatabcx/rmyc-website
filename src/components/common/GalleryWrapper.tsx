@@ -1,4 +1,4 @@
-import { getGalleryData } from '@/app/actions/gallery';
+import { getGalleryData } from '@/actions/gallery';
 import React from 'react';
 import Gallery from './Gallery';
 

@@ -11,7 +11,7 @@ import { Header } from '@/components/common/Header';
 import { SectionHero } from '@/components/common/SectionHero';
 import { AboutImages } from '@/components/about/AboutImages';
 import GalleryWrapper from '@/components/common/GalleryWrapper';
-import { getAboutPageData } from '../actions/about';
+import { getAboutPageData } from '../../actions/about';
 
 export default async function About() {
   const about = await getAboutPageData();
@@ -28,7 +28,12 @@ export default async function About() {
         historyHeading={about.clubHistoryHeading}
         historyDescription={about.clubHistoryData}
       />
-      <SailingAndSportsActivity />
+      <SailingAndSportsActivity
+        sailingData={about.sailingData}
+        sailingHeading={about.sailingHeading}
+        sailingSubheading={about.sailingSubheading}
+        sailingDescription={about.sailingDescription}
+      />
       <Achievements
         achievementHeading={about.achievementHeading}
         achievementSubtext={about.achievementSubtext}

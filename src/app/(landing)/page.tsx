@@ -6,7 +6,7 @@ import { WhyChooseUs } from '@/components/landing/WhyChooseUs';
 import { Footer } from '@/components/common/Footer';
 import { Cta } from '@/components/common/CTA';
 import CompetitionWrapper from '@/components/common/CompetitionWrapper';
-import { getHomePageData } from '../actions/home';
+import { getHomePageData } from '../../actions/home';
 import GalleryWrapper from '@/components/common/GalleryWrapper';
 
 export default async function page() {

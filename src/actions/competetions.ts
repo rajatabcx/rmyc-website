@@ -1,3 +1,4 @@
+'use server';
 import { competitionQuery, competitionsQuery } from '@/lib/graphql';
 
 export const getCompetitions = async () => {
