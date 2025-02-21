@@ -52,6 +52,9 @@ query HomeQuery ($id: ID!) {
   ) {
     mainTitle
     mainDescription
+    heroBg{
+      url
+    }
     aboutTitle
     aboutDescription
     aboutPara1Heading

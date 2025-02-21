@@ -6,9 +6,11 @@ import { useCallback } from 'react';
 export function Hero({
   heading,
   subHeading,
+  bgImage,
 }: {
   heading: string;
   subHeading: string;
+  bgImage: { url: string };
 }) {
   const scrollToNextSection = useCallback(() => {
     window.scrollTo({
@@ -19,7 +21,10 @@ export function Hero({
 
   return (
     <section className='relative min-h-screen w-full'>
-      <div className='absolute inset-0 bg-[url(/gallery_6.jpg)] bg-cover bg-center bg-no-repeat'>
+      <div
+        className='absolute inset-0 bg-cover bg-center bg-no-repeat'
+        style={{ backgroundImage: `url(${bgImage.url})` }}
+      >
         <div className='absolute inset-0 bg-black/30' />
       </div>
 

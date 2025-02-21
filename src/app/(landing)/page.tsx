@@ -18,6 +18,7 @@ export default async function page() {
       <Hero
         heading={homePageData.mainTitle}
         subHeading={homePageData.mainDescription}
+        bgImage={homePageData.heroBg}
       />
       <About
         aboutTitle={homePageData.aboutTitle}
