@@ -8,7 +8,7 @@ export default function Contact() {
   return (
     <>
       <Header />
-      <SectionHero heading='Contact Us' />
+      <SectionHero heading='Contact Us' bgImage='/section_hero_bg.jpg' />
       <ContactSection />
       <Footer />
     </>
