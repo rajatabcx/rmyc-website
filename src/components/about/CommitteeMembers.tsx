@@ -11,7 +11,7 @@ export const CommitteeMembers = ({
   committeeDescription: string;
   committeeData: {
     name: string;
-    title: string;
+    description: string;
     image: { url: string };
   }[];
 }) => {
@@ -30,7 +30,7 @@ export const CommitteeMembers = ({
       <div className='mt-6 grid gap-3 sm:grid-cols-2 lg:mt-10 lg:grid-cols-4'>
         {committeeData.map((member) => (
           <Card
-            key={member.title}
+            key={member.name}
             className='hover:shadow-xl transition-shadow duration-300 border-none bg-white'
           >
             <CardContent className='flex flex-col items-center p-6 text-center'>
@@ -38,9 +38,9 @@ export const CommitteeMembers = ({
                 <UserRound className='w-10 h-10 text-blue-600' />
               </div>
               <h3 className='font-bold text-xl mb-1 text-blue-900'>
-                {member.title}
+                {member.name}
               </h3>
-              <p className='text-lg text-gray-700'>{member.name}</p>
+              <p className='text-lg text-gray-700'>{member.description}</p>
             </CardContent>
           </Card>
         ))}
