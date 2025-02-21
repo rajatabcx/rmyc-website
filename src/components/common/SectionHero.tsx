@@ -1,9 +1,23 @@
+import { cn } from '@/lib/utils';
 import React from 'react';
 
-export function SectionHero({ heading }: { heading: string }) {
+export function SectionHero({
+  heading,
+  bgImage,
+}: {
+  heading: string;
+  bgImage: string;
+}) {
   return (
     <section className='relative h-[350px] w-full'>
-      <div className='absolute inset-0 bg-[url(/section_hero_bg.jpg)] bg-cover bg-[position:0%_60%] bg-no-repeat'>
+      <div
+        style={{
+          backgroundImage: `url(${bgImage})`,
+        }}
+        className={cn(
+          'absolute inset-0 bg-cover bg-[position:0%_60%] bg-no-repeat'
+        )}
+      >
         <div className='absolute inset-0 bg-blue-950/50' />
       </div>
 

@@ -10,7 +10,7 @@ export default function Gallery({
 }: {
   heading: string;
   subHeading: string;
-  images: string[];
+  images: { url: string }[];
 }) {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [selectedImagePosition, setSelectedImagePosition] = useState<{
@@ -63,9 +63,9 @@ export default function Gallery({
               className={`grid-item ${
                 index % 5 === 0 || index % 5 === 3 ? 'grid-item-large' : ''
               } cursor-pointer`}
-              onClick={(e) => handleImageClick(image, e)}
+              onClick={(e) => handleImageClick(image.url, e)}
             >
-              <img src={image} alt={`Gallery ${index + 1}`} />
+              <img src={image.url} alt={`Gallery ${index + 1}`} />
             </div>
           ))}
         </div>

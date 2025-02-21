@@ -7,29 +7,53 @@ import History from '@/components/about/History';
 import { SailingAndSportsActivity } from '@/components/about/SailingAndSportsActivity';
 import { SocialResponsibilityAndVision } from '@/components/about/SocialResponsibilityandVision';
 import { Footer } from '@/components/common/Footer';
-import Gallery from '@/components/common/Gallery';
 import { Header } from '@/components/common/Header';
 import { SectionHero } from '@/components/common/SectionHero';
-import { galleryImages } from '@/lib/const';
 import { AboutImages } from '@/components/about/AboutImages';
+import GalleryWrapper from '@/components/common/GalleryWrapper';
+import { getAboutPageData } from '../actions/about';
 
-export default function About() {
+export default async function About() {
+  const about = await getAboutPageData();
   return (
     <>
       <Header />
-      <SectionHero heading='About Us' />
-      <AboutImages />
-      <History />
-      <SailingAndSportsActivity />
-      <Achievements />
-      <SocialResponsibilityAndVision />
-      <Boats />
-      <CommitteeMembers />
-      <Gallery
-        heading='Our Gallery'
-        subHeading='Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.'
-        images={galleryImages}
+      <SectionHero heading={about.pageHeading} bgImage={about.pageBg.url} />
+      <AboutImages
+        heading={about.aboutClubHeading}
+        description={about.aboutClubDescription}
+        data={about.aboutClubData}
       />
+      <History
+        historyHeading={about.clubHistoryHeading}
+        historyDescription={about.clubHistoryData}
+      />
+      <SailingAndSportsActivity />
+      <Achievements
+        achievementHeading={about.achievementHeading}
+        achievementSubtext={about.achievementSubtext}
+        achievementDescription={about.achievementDescription}
+        achievements={about.achievements}
+      />
+      <SocialResponsibilityAndVision
+        socialResponsibilityHeading={about.socialResponsibilityHeading}
+        socialResponsibilityPara={about.socialResponsibilityPara}
+        socialResponsibilitiesImages={about.socialResponsibilitiesImages}
+        visionHeading={about.visionHeading}
+        visionPara={about.visionPara}
+        visionImages={about.visionImages}
+      />
+      <Boats
+        boatsHeading={about.boatsHeading}
+        boatsDescription={about.boatsDescription}
+        boatsData={about.boatsData}
+      />
+      <CommitteeMembers
+        committeeHeading={about.comitteeHeading}
+        committeeDescription={about.comitteeDescription}
+        committeeData={about.comitteeData}
+      />
+      <GalleryWrapper />
       <Footer />
     </>
   );

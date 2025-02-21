@@ -1,19 +1,23 @@
 import { Sailboat2 } from './Sailboat2';
 import Link from 'next/link';
 import { buttonVariants } from '@/components/ui/button';
-export const Cta = () => {
+export const Cta = ({
+  heading,
+  description,
+}: {
+  heading: string;
+  description: string;
+}) => {
   return (
     <section className='py-10 bg-secondary/50 relative overflow-hidden'>
       <div>
         <div className='flex items-center justify-center rounded-2xl px-8 py-20 text-center md:p-20'>
           <div className='mx-auto max-w-screen-md'>
             <h1 className='mb-4 text-balance text-3xl font-semibold md:text-5xl'>
-              Join Our Royal Madras Yacht Club
+              {heading}
             </h1>
             <p className='text-muted-foreground text-sm md:text-base'>
-              We are a community of sailors who are passionate about sailing and
-              the sport of sailing. We are a community of sailors who are
-              passionate about sailing and the sport of sailing.
+              {description}
             </p>
             <div className='mt-11 flex flex-col justify-center gap-2 sm:flex-row'>
               <Link

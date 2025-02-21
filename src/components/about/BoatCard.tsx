@@ -16,24 +16,31 @@ interface Props {
   item: {
     name: string;
     description: string;
-    images: string[];
+    images: { url: string }[];
   };
 }
 
 export function BoatCard({ item }: Props) {
+  const delay = 3000 * (Math.random() + 1);
   return (
     <Card className='w-full max-w-md mx-auto overflow-hidden bg-background shadow-lg'>
       <CardContent className='p-0'>
         <Carousel
           className='w-full'
-          plugins={[Autoplay({ delay: 3000 * (Math.random() * 10) })]}
+          plugins={[
+            Autoplay({
+              delay,
+              stopOnInteraction: false,
+              stopOnMouseEnter: true,
+            }),
+          ]}
         >
           <CarouselContent>
             {item.images.map((image, index) => (
               <CarouselItem key={index}>
                 <AspectRatio ratio={16 / 9}>
                   <img
-                    src={image || '/placeholder.svg'}
+                    src={image.url}
                     alt={`${item.name} - Image ${index + 1}`}
                     className='object-cover w-full h-full'
                   />

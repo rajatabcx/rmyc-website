@@ -97,19 +97,6 @@ export const achievements = [
     icon: Trophy,
   },
 ];
-export const galleryImages = [
-  '/gallery_1.jpg',
-  '/gallery_2.jpg',
-  '/gallery_3.jpg',
-  '/about_2.jpg',
-  '/why_7.jpg',
-  '/gallery_5.jpg',
-  '/gallery_13.jpg',
-  '/about_9.jpg',
-  '/gallery_9.jpg',
-  '/gallery_10.jpg',
-  '/gallery_12.jpg',
-];
 
 export const committeeMembers = [
   {

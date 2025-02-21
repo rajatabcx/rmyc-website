@@ -8,8 +8,9 @@ import { Menu, X } from 'lucide-react';
 
 const leftNavItems = [
   { name: 'HOME', href: '/' },
-  { name: 'ABOUT THE CLUB', href: '/about' },
+  { name: 'ABOUT', href: '/about' },
   { name: 'LEISURE SAILING', href: '/leisure' },
+  { name: 'COMPETITIONS', href: '/#competitions' },
 ];
 
 const rightNavItems = [
@@ -29,7 +30,7 @@ export function Header() {
           <nav className='hidden lg:flex lg:flex-1'>
             <ul className='flex items-center space-x-8'>
               {leftNavItems.map((item) => (
-                <li key={item.name}>
+                <li key={item.name} className='text-sm'>
                   <NavLink href={item.href}>{item.name}</NavLink>
                 </li>
               ))}
@@ -57,7 +58,7 @@ export function Header() {
           <nav className='hidden lg:flex lg:flex-1 lg:justify-end'>
             <ul className='flex items-center space-x-8'>
               {rightNavItems.map((item) => (
-                <li key={item.name}>
+                <li key={item.name} className='text-sm'>
                   <NavLink href={item.href}>{item.name}</NavLink>
                 </li>
               ))}
