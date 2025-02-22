@@ -7,7 +7,6 @@ import React from 'react';
 
 export default async function Learning() {
   const learning = await getLearningPageData();
-  console.log(learning);
   return (
     <>
       <Header />

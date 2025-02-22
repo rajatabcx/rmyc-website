@@ -64,7 +64,7 @@ export function LearningProgramsSection({
                   <ul className='space-y-2 text-xs sm:text-sm'>
                     {program.features.map((feature, i) => (
                       <li key={i} className='flex items-start gap-2'>
-                        <ChevronRight className='h-5 w-5 text-blue-600 shrink-0 mt-0.5' />
+                        <ChevronRight className='h-5 w-5 text-blue-600 shrink-0' />
                         <span className='text-gray-600'>{feature}</span>
                       </li>
                     ))}

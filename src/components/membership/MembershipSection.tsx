@@ -139,7 +139,7 @@ export function MembershipSection({
               >
                 <DynamicIcon
                   name={reason.iconName as any}
-                  className='h-6 w-6 mt-1'
+                  className='h-6 w-6 mt-1 flex-shrink-0'
                 />
                 <div>
                   <h4 className='font-semibold'>{reason.title}</h4>
