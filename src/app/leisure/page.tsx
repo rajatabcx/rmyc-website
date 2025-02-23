@@ -5,6 +5,8 @@ import { SectionHero } from '@/components/common/SectionHero';
 import { LeisureSailing } from '@/components/LeisureSailing';
 import React from 'react';
 
+export const dynamic = 'force-dynamic';
+
 export default async function Leisure() {
   const leisure = await getLeisurePageData();
   return (

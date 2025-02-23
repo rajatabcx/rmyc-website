@@ -9,6 +9,9 @@ import Image from 'next/image';
 import { CalendarDays } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
+
+export const dynamic = 'force-dynamic';
+
 export default async function CompetitionPage({
   params,
 }: {

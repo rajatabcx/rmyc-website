@@ -5,6 +5,8 @@ import { SectionHero } from '@/components/common/SectionHero';
 import { MembershipSection } from '@/components/membership/MembershipSection';
 import React from 'react';
 
+export const dynamic = 'force-dynamic';
+
 export default async function Membership() {
   const membership = await getMembershipPageData();
   return (

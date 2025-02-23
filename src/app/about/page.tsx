@@ -13,6 +13,8 @@ import { AboutImages } from '@/components/about/AboutImages';
 import GalleryWrapper from '@/components/common/GalleryWrapper';
 import { getAboutPageData } from '../../actions/about';
 
+export const dynamic = 'force-dynamic';
+
 export default async function About() {
   const about = await getAboutPageData();
   return (

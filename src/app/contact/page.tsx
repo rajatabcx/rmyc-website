@@ -4,6 +4,8 @@ import { ContactSection } from '@/components/contact/ContactSection';
 import React from 'react';
 import { SectionHero } from '@/components/common/SectionHero';
 
+export const dynamic = 'force-dynamic';
+
 export default function Contact() {
   return (
     <>

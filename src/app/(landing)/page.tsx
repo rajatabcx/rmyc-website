@@ -9,6 +9,8 @@ import CompetitionWrapper from '@/components/common/CompetitionWrapper';
 import { getHomePageData } from '../../actions/home';
 import GalleryWrapper from '@/components/common/GalleryWrapper';
 
+export const dynamic = 'force-dynamic';
+
 export default async function page() {
   const homePageData = await getHomePageData();
 

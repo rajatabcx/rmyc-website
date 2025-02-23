@@ -5,6 +5,8 @@ import { LearningProgramsSection } from '@/components/learning/LearningProgramSe
 import { getLearningPageData } from '@/actions/learning';
 import React from 'react';
 
+export const dynamic = 'force-dynamic';
+
 export default async function Learning() {
   const learning = await getLearningPageData();
   return (
